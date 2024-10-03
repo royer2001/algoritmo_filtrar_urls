@@ -13,7 +13,7 @@ Este proyecto consiste en dos partes principales:
 
 ```
 ├── generate_urls.py      # Script para generar URLs aleatorias
-├── filter_urls.py        # Script para filtrar URLs según criterios
+├── main.py               # Script para filtrar URLs según criterios
 ├── urls.txt              # Archivo generado con URLs aleatorias (se genera al ejecutar generate_urls.py)
 ├── README.md             # Documentación del proyecto
 ```
@@ -34,7 +34,7 @@ Este comando generará el archivo `urls.txt` con 100 URLs aleatorias.
 
 ### 2. Filtrar URLs
 
-El archivo `filter_urls.py` toma el archivo `urls.txt` como entrada y filtra las URLs que cumplen con los siguientes criterios:
+El archivo `main.py` toma el archivo `urls.txt` como entrada y filtra las URLs que cumplen con los siguientes criterios:
 
 - El dominio contiene la palabra "shop".
 - La URL termina con la extensión `.html`.
@@ -45,7 +45,7 @@ Además, el script cuenta y muestra el número total de URLs únicas que cumplen
 #### Ejecución:
 
 ```bash
-python filter_urls.py
+python main.py
 ```
 
 Este comando mostrará las URLs que cumplen con los criterios y el número total de URLs únicas que cumplen con los requisitos.
@@ -65,20 +65,14 @@ Las URLs válidas son aquellas que contienen "shop" en el dominio y terminan en 
 
 ## Ejemplo de Salida
 
-Si ejecutas `filter_urls.py`, obtendrás una salida como la siguiente:
+Si ejecutas `main.py`, obtendrás una salida como la siguiente:
 
 ```bash
 URLs que cumplen con los criterios:
 http://www.shoponline.com/products.html
 http://www.techshop.net/about.html
 ...
+[Más datos]
 
 Número total de URLs únicas: 10
 ```
-
-## Personalización
-
-- **Número de URLs**: Puedes ajustar el número de URLs generadas modificando el parámetro `num_urls` en `generate_urls.py`.
-- **Criterios de Filtrado**: Si deseas cambiar los criterios de filtrado, puedes modificar el código en `filter_urls.py` según sea necesario.
-
----
